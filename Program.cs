@@ -7,11 +7,15 @@ namespace Store
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("(после 300, а потом 1000 покупок действует скидка!)");
+            Console.Write("Введите своё имя: ");
+            string nameUser = Console.ReadLine();
+
             User user = new User(
-                "Игорь",
+                nameUser,
                 "ул. Пушкина, дом 228",
-                10000,
-                299);
+                100000,
+                0);
             
             // Молочные продукты
             Milk milk = new Milk(
@@ -58,7 +62,7 @@ namespace Store
             // Хлеб
             Bread bread = new Bread(
                 "Хлеб",
-               "Владхлеб",
+               "Хлебо Комбинат",
                 25);
             Bun bun = new Bun(
                 "Булочка",
@@ -85,25 +89,61 @@ namespace Store
                 "Coca-Cola",
                 "Coca-Cola Company",
                 69);
+
+            Product[] products = new Product[] {
+                milk,
+                cheese,
+                sourCream,
+                cottageCheese,
+                cocaCola,
+                juice,
+                water,
+                mineralWater,
+                bread,
+                bun,
+                beef,
+                hen,
+                mutton,
+                pork
+            };
+
+            Informant informer = new Informant();
             
             // Вывод
-            Console.WriteLine("В какой отдел пойдёте? : ");
-            Console.WriteLine("Хлебный отдел(1)");
-            Console.WriteLine("Напитки(2)");
-            Console.WriteLine("Молочная продукция(3)");
-            Console.WriteLine("Мясо(4)");
             
-            Console.WriteLine("----------------------");
-            
-            string userInput = Console.ReadLine();
-            
-            if (userInput == "1")
+            Console.WriteLine();
+            Console.WriteLine($"Здравствуйте {user.Name}");
+            while (true)
             {
-                Console.WriteLine("Список товаров: ");
-                Console.WriteLine("Хлеб: ");
-                Console.WriteLine("Название: " + bread.Name);
-                Console.WriteLine("Цена: " + bread.Price);
-                Console.WriteLine("Производитель: " + bread.Company);
+                Console.WriteLine();
+                Console.WriteLine($"Ваш баланс {user.Balance}");
+                Console.WriteLine();
+                for (int i = 0; i < products.Length; i++)
+                {
+                    Console.WriteLine($"Товар {i} {products[i].Name} по цене {products[i].Price}");
+                }
+                Console.WriteLine("Выберете номер товара и нажмите Enter:");
+
+                string str = Console.ReadLine();
+                int productNumber = Convert.ToInt32(str);
+
+                if (productNumber >= 0 && productNumber < products.Length)
+                {
+
+                    if (products[productNumber].Price < user.Balance)
+                    {
+                        informer.Buy(user, products[productNumber]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("У вас недостаточно средств");
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Таких товаров нет");
+                }
             }
         }
     }

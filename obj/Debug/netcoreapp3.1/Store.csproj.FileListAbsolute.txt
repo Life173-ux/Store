@@ -1,0 +1,11 @@
+C:\GitHub\Store\bin\Debug\netcoreapp3.1\Store.exe
+C:\GitHub\Store\bin\Debug\netcoreapp3.1\Store.deps.json
+C:\GitHub\Store\bin\Debug\netcoreapp3.1\Store.runtimeconfig.json
+C:\GitHub\Store\bin\Debug\netcoreapp3.1\Store.runtimeconfig.dev.json
+C:\GitHub\Store\bin\Debug\netcoreapp3.1\Store.dll
+C:\GitHub\Store\bin\Debug\netcoreapp3.1\Store.pdb
+C:\GitHub\Store\obj\Debug\netcoreapp3.1\Store.csprojAssemblyReference.cache
+C:\GitHub\Store\obj\Debug\netcoreapp3.1\Store.AssemblyInfoInputs.cache
+C:\GitHub\Store\obj\Debug\netcoreapp3.1\Store.AssemblyInfo.cs
+C:\GitHub\Store\obj\Debug\netcoreapp3.1\Store.dll
+C:\GitHub\Store\obj\Debug\netcoreapp3.1\Store.pdb
