@@ -1,4 +1,11 @@
-# Store
+# Магазин:
 
-    After 300 and after 1000 purchases, the program has certain discounts
-    
+    После 300 и 1000 покупок в магаизине действуют скидки.
+
+# Текущая версия:
+
+    1.0.0
+
+# Связь со мной:
+
+    Мой ВК: [https://vk.com/id467454478]
