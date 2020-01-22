@@ -90,6 +90,26 @@ namespace Store
                 "Coca-Cola Company",
                 69);
 
+            // Овощи
+
+            Cabbage cabbage = new Cabbage(
+                "Капуста",
+                "Огород дяди Пети",
+                45
+            );
+
+            Potato potato = new Potato(
+                "Картошка",
+                "Сад Лукашенко",
+                65
+            );
+
+            SevenA sevenA = new SevenA(
+                "7 \"А\" класс",
+                "хз",
+                0
+            );
+
             Product[] products = new Product[] {
                 milk,
                 cheese,
@@ -104,7 +124,10 @@ namespace Store
                 beef,
                 hen,
                 mutton,
-                pork
+                pork,
+                cabbage,
+                potato,
+                sevenA
             };
 
             Informant informer = new Informant();
